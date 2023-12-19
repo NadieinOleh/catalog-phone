@@ -10,7 +10,7 @@ import {BoxLinksStyled} from './Styles';
 
 const Header = () => {
   return (
-    <header>
+    <header id='header'>
       <Container>
         <BoxLinksStyled>
           <Links />
