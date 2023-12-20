@@ -7,7 +7,8 @@
     "plugin:react/recommended",
     "plugin:import/recommended",
     "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "next"
   ],
   "ignorePatterns": [
     "node_modules/",
