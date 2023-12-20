@@ -9,7 +9,7 @@ export const BoxStyled = styled(Box)(({theme}) => ({
   marginBottom: theme.spacing(3),
 }));
 
-export const ImageStyled = styled(Image)(({theme}) => ({
- objectFit: 'contain',
- objectPosition: 'right',
+export const ImageStyled = styled(Image)(() => ({
+  objectFit: 'contain',
+  objectPosition: 'right',
 }));

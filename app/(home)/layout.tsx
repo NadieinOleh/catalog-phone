@@ -1,6 +1,6 @@
+import React from 'react';
 import type {Metadata} from 'next';
 import {Roboto} from 'next/font/google';
-import {AppRouterCacheProvider} from '@mui/material-nextjs/v14-appRouter';
 import ThemeRegistry from '@/theme/ThemeRegistry';
 import Header from '../common/Header/Header';
 import Footer from '../common/Footer/Footer';

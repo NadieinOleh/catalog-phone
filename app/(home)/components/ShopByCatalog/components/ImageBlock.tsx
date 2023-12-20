@@ -3,7 +3,7 @@
 import React, {FC} from 'react';
 import Link from 'next/link';
 
-import { BoxStyled, ImageStyled } from './Styles';
+import {BoxStyled, ImageStyled} from './Styles';
 
 type Props = {
   bg: string;

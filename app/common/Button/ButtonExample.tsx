@@ -8,8 +8,9 @@ const ButtonExample = () => {
 
   return (
     <Box>
-      <Button variant="contained" onClick={() => console.log('client components')}>client component</Button>
-
+      <Button variant="contained" onClick={() => console.log('client components')}>
+        client component
+      </Button>
       dskfhsdhf
     </Box>
   );

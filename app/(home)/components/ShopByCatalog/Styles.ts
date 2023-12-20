@@ -2,14 +2,14 @@
 
 import {Grid, styled, Typography, Box} from '@mui/material';
 
-export const GridStyled = styled(Grid)(({theme}) => ({
+export const GridStyled = styled(Grid)(() => ({
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
 }));
 
-export const TextStyled = styled(Typography)(({theme}) => ({
+export const TextStyled = styled(Typography)(() => ({
   alignSelf: 'flex-start',
 }));
 

@@ -1,6 +1,6 @@
 'use client';
 
-import {Box, styled, colors} from '@mui/material';
+import {Box, styled} from '@mui/material';
 import Link from 'next/link';
 
 export const LinkStyled = styled(Link)(({theme}) => ({
@@ -36,7 +36,7 @@ export const BoxStyled = styled(Box)(({theme}) => ({
   gap: theme.spacing(8),
 }));
 
-export const LogoStyled = styled(Link)(({theme}) => ({
+export const LogoStyled = styled(Link)(() => ({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',

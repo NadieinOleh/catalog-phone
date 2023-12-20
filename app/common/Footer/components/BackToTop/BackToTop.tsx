@@ -5,7 +5,7 @@ import {Typography} from '@mui/material';
 
 import ArrowBlock from '@/app/common/ArrowBlock/ArrowBlock';
 import ArrowUp from '@/app/common/icons/ArrowUp';
-import { BoxStyled } from './Styles';
+import {BoxStyled} from './Styles';
 
 const BackToTop = () => {
   return (
