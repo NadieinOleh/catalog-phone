@@ -1,11 +1,10 @@
-'use client'
+'use client';
 
-import React from 'react'
-import { Box } from '@mui/material'
+import React from 'react';
 
-import { footerLinks } from '@/helpers/constants'
+import {footerLinks} from '@/helpers/constants';
 
-import { BoxStyled, LinkStyled } from '@/app/common/Header/components/Links/Styles'
+import {BoxStyled, LinkStyled} from '@/app/common/Header/components/Links/Styles';
 
 const Links = () => {
   return (
@@ -16,7 +15,7 @@ const Links = () => {
         </LinkStyled>
       ))}
     </BoxStyled>
-  )
-}
+  );
+};
 
-export default Links
+export default Links;
