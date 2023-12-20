@@ -1,7 +1,11 @@
+import React from 'react';
 import type {Metadata} from 'next';
 import {Roboto} from 'next/font/google';
-import {AppRouterCacheProvider} from '@mui/material-nextjs/v14-appRouter';
 import ThemeRegistry from '@/theme/ThemeRegistry';
+import Header from '../common/Header/Header';
+import Footer from '../common/Footer/Footer';
+
+import styles from './page.module.css';
 
 const roboto = Roboto({
   subsets: ['cyrillic', 'latin'],
@@ -18,7 +22,11 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang="en">
       <ThemeRegistry>
-        <body className={roboto.className}>{children}</body>
+        <body className={[roboto.className, styles.body].join(' ')}>
+          <Header />
+          {children}
+          <Footer />
+        </body>
       </ThemeRegistry>
     </html>
   );

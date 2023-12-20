@@ -59,14 +59,16 @@ const createCommonTheme = (theme: Theme) =>
             lineHeight: '26px',
             fontWeight: '500',
           },
-          h4: { // uppercase
+          h4: {
+            // uppercase
             fontSize: '12px',
             lineHeight: '11px',
             fontWeight: '700',
             letterSpacing: '0.04em',
             textTransform: 'uppercase',
           },
-          h5: { //buttons
+          h5: {
+            //buttons
             fontSize: '14px',
             lineHeight: '21px',
             fontWeight: '600',
@@ -89,6 +91,10 @@ const createCommonTheme = (theme: Theme) =>
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
+
+            '&:hover': {
+              background: theme.palette.info.dark,
+            }
           },
           startIcon: {
             display: 'flex',
@@ -110,7 +116,7 @@ const createCommonTheme = (theme: Theme) =>
             borderBlockStyle: 'solid',
             borderBlockColor: theme.palette.background.white,
             borderBlock: '1px',
-            color: theme.palette.success.main
+            color: theme.palette.success.main,
           },
         },
       },
