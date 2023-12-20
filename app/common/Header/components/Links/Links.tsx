@@ -1,10 +1,10 @@
 'use client';
 
-import Logo from '@/app/common/icons/Logo';
-import {headerLinks} from '@/helpers/constants';
-import {Box} from '@mui/material';
-import Link from 'next/link';
 import React from 'react';
+
+import Logo from '@/app/common/icons/Logo';
+import {headerLinks, Link} from '@/helpers/constants';
+
 import {LinkStyled, BoxStyled, LogoStyled} from './Styles';
 
 const Links = () => {
@@ -14,7 +14,7 @@ const Links = () => {
         <Logo />
       </LogoStyled>
 
-      {headerLinks.map(link => (
+      {headerLinks.map((link: Link) => (
         <LinkStyled key={link.id} href={link.link}>
           {link.link}
         </LinkStyled>

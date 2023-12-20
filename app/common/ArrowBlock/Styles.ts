@@ -15,5 +15,5 @@ export const BoxStyled = styled(Box)(({theme}) => ({
 
   '&:hover path': {
     fill: theme.palette.primary.main,
-  }
+  },
 }));

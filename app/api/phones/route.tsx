@@ -1,8 +1,7 @@
-import {NextRequest, NextResponse} from 'next/server';
-import mongoose from 'mongoose';
+import {NextResponse} from 'next/server';
 
 import Phone from '../../../models/Phones';
-import connect from '../../../libs/MongoConnect';
+import {connect} from '../../../libs/MongoConnect';
 
 export const GET = async () => {
   try {
