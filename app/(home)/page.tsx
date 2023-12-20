@@ -17,7 +17,7 @@ const getData = async () => {
 
 const Home = async () => {
   const phone = await getData();
-  console.log(phone[0]);
+  // console.log(phone[0]);
 
   return (
     <main className={styles.main}>

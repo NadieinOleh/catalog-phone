@@ -8,7 +8,7 @@ const ButtonExample = () => {
 
   return (
     <Box>
-      <Button variant="contained" onClick={() => console.log('client components')}>
+      <Button variant="contained">
         client component
       </Button>
       dskfhsdhf
