@@ -1,89 +1,125 @@
 {
-    "parser": "@typescript-eslint/parser",
-    "extends": [
-        "next/core-web-vitals",
-        "plugin:prettier/recommended",
-        "eslint:recommended",
-        "plugin:react/recommended",
-        "plugin:import/recommended",
-        "plugin:@typescript-eslint/eslint-recommended",
-        "plugin:@typescript-eslint/recommended"
-    ],
-    "ignorePatterns": ["node_modules/", ".next/", "public/"],
-    "settings": {
-        "react": {
-            "version": "detect"
-        },
-        "import/parsers": {
-            "@typescript-eslint/parser": [".ts", ".tsx", ".jsx", ".js"]
-        },
-        "import/resolver": {
-            "typescript": {
-                "alwaysTryTypes": true
-            }
-        }
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:prettier/recommended",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:import/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "ignorePatterns": [
+    "node_modules/",
+    ".next/",
+    "public/"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
     },
-    "plugins": ["prettier", "react", "@next/eslint-plugin-next", "@typescript-eslint"],
-    "env": {
-        "browser": true,
-        "node": true,
-        "es6": true,
-        "jest": true
+    "import/parsers": {
+      "@typescript-eslint/parser": [
+        ".ts",
+        ".tsx",
+        ".jsx",
+        ".js"
+      ]
     },
-    "rules": {
-        "react-hooks/rules-of-hooks": "error",
-        "react-hooks/exhaustive-deps": "warn",
-        "@typescript-eslint/explicit-module-boundary-types": "off",
-        "max-len": ["warn", 120],
-        "react/prop-types": "off",
-        "import/no-cycle": [
-            "error",
-            {
-                "maxDepth": 1
-            }
-        ],
-        "prettier/prettier": [
-            "error",
-            {
-                "endOfLine": "auto"
-            }
-        ],
-        "no-console": [
-            "error",
-            {
-                "allow": ["error"]
-            }
-        ],
-        "import/namespace": "off",
-        "@typescript-eslint/ban-ts-comment": "off",
-        "@typescript-eslint/no-explicit-any": "off",
-        "import/named": "off",
-        "no-undef": "error",
-        "object-curly-spacing": ["error", "never"],
-        "arrow-parens": ["error", "as-needed"],
-        "jsx-quotes": "off",
-        "comma-dangle": ["error", "always-multiline"],
-        "quote-props": ["error", "as-needed"],
-        "semi": ["error", "always"],
-        "react/jsx-closing-bracket-location": [
-            "error",
-            {
-                "nonEmpty": "after-props"
-            }
-        ],
-        "react/jsx-closing-slash": [
-            "off",
-            {
-                "selfClosing": "never"
-            }
-        ],
-        "react/jsx-tag-spacing": [
-            "error",
-            {
-                "beforeSelfClosing": "always",
-                "afterOpening": "never",
-                "beforeClosing": "allow"
-            }
-        ]
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true
+      }
     }
+  },
+  "plugins": [
+    "prettier",
+    "react",
+    "@next/eslint-plugin-next",
+    "@typescript-eslint"
+  ],
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "jest": true
+  },
+  "rules": {
+    "react/no-unescaped-entities": "off",
+    "@next/next/no-page-custom-font": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "max-len": [
+      "warn",
+      120
+    ],
+    "react/prop-types": "off",
+    "import/no-cycle": [
+      "error",
+      {
+        "maxDepth": 1
+      }
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "no-console": [
+      "error",
+      {
+        "allow": [
+          "error"
+        ]
+      }
+    ],
+    "import/namespace": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "import/named": "off",
+    "no-undef": "error",
+    "object-curly-spacing": [
+      "error",
+      "never"
+    ],
+    "arrow-parens": [
+      "error",
+      "as-needed"
+    ],
+    "jsx-quotes": "off",
+    "comma-dangle": [
+      "error",
+      "always-multiline"
+    ],
+    "quote-props": [
+      "error",
+      "as-needed"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "react/jsx-closing-bracket-location": [
+      "error",
+      {
+        "nonEmpty": "after-props"
+      }
+    ],
+    "react/jsx-closing-slash": [
+      "off",
+      {
+        "selfClosing": "never"
+      }
+    ],
+    "react/jsx-tag-spacing": [
+      "error",
+      {
+        "beforeSelfClosing": "always",
+        "afterOpening": "never",
+        "beforeClosing": "allow"
+      }
+    ]
+  }
 }
