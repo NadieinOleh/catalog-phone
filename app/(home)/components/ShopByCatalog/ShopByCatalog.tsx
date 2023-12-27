@@ -1,43 +1,47 @@
 'use client';
 
 import React from 'react';
-import {Grid} from '@mui/material';
+import {Grid, Typography} from '@mui/material';
 
 import Title from '@/app/common/Title/Title';
 import ImageBlock from './components/ImageBlock';
 
-import {GridStyled, TextStyled, BoxStyled} from './Styles';
-
-//do amount from data.length
+import {GridStyled, BoxStyled, LinkStyled} from './Styles';
 
 const ShopByCatalog = ({amount = 0}) => {
   return (
     <BoxStyled>
-      <Title title={'Hot prices'} />
+      <Title title={'Shop by category'} />
 
       <Grid container spacing={3}>
         <GridStyled item xl={4} xs={6}>
-          <ImageBlock path={'/phone'} bg={'#FCDBC1'} image={'/image6.png'} />
-          <TextStyled variant="h3">Mobile phones</TextStyled>
-          <TextStyled color={'secondary.main'} variant="body1">
-            {amount} models
-          </TextStyled>
+          <ImageBlock path={'/phones'} bg={'#FCDBC1'} image={'/image6.png'} />
+          <LinkStyled href={'/phones'}>
+            <Typography variant="h3">Mobile phones</Typography>
+            <Typography color={'secondary.main'} variant="body1">
+              {amount} models
+            </Typography>
+          </LinkStyled>
         </GridStyled>
 
         <GridStyled item xl={4} xs={6}>
           <ImageBlock path={'/tablets'} bg={'#8D8D92'} image={'/image5.png'} />
-          <TextStyled variant="h3">Tablets </TextStyled>
-          <TextStyled color={'secondary.main'} variant="body1">
-            42 models
-          </TextStyled>
+          <LinkStyled href={'/tablets'}>
+            <Typography variant="h3">Tablets </Typography>
+            <Typography color={'secondary.main'} variant="body1">
+              0 models
+            </Typography>
+          </LinkStyled>
         </GridStyled>
 
         <GridStyled item xl={4} xs={6}>
           <ImageBlock path={'/accessories'} bg={'#D53C51'} image={'/image7.png'} />
-          <TextStyled variant="h3">Accessories </TextStyled>
-          <TextStyled color={'secondary.main'} variant="body1">
-            100 models
-          </TextStyled>
+          <LinkStyled href={'/accessories'}>
+            <Typography variant="h3">Accessories </Typography>
+            <Typography color={'secondary.main'} variant="body1">
+              0 models
+            </Typography>
+          </LinkStyled>
         </GridStyled>
       </Grid>
     </BoxStyled>

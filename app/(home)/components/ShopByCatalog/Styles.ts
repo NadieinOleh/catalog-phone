@@ -1,6 +1,7 @@
 'use client';
 
-import {Grid, styled, Typography, Box} from '@mui/material';
+import {Grid, styled, Box} from '@mui/material';
+import Link from 'next/link';
 
 export const GridStyled = styled(Grid)(() => ({
   display: 'flex',
@@ -9,10 +10,12 @@ export const GridStyled = styled(Grid)(() => ({
   alignItems: 'center',
 }));
 
-export const TextStyled = styled(Typography)(() => ({
-  alignSelf: 'flex-start',
-}));
-
 export const BoxStyled = styled(Box)(({theme}) => ({
   marginBottom: theme.spacing(10),
+}));
+
+export const LinkStyled = styled(Link)(({theme}) => ({
+  textDecoration: 'none',
+  color: theme.palette.primary.main,
+  alignSelf: 'flex-start',
 }));

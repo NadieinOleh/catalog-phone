@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import {Theme, createTheme, colors} from '@mui/material';
+import {Theme, createTheme} from '@mui/material';
 
 import lightPalette from './lightPalette';
 
@@ -91,10 +91,12 @@ const createCommonTheme = (theme: Theme) =>
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
+            boxSizing: 'border-box',
+            minWidth: '208px',
 
             '&:hover': {
               background: theme.palette.info.dark,
-            }
+            },
           },
           startIcon: {
             display: 'flex',
@@ -107,9 +109,6 @@ const createCommonTheme = (theme: Theme) =>
           },
           containedPrimary: {
             color: theme.palette.background.white,
-
-            minHeight: '2.5rem',
-            minWidth: '11rem',
             background: theme.palette.primary.main,
           },
           containedSecondary: {
@@ -136,13 +135,17 @@ const createCommonTheme = (theme: Theme) =>
             border: `2px solid ${theme.palette.background.border}`,
             height: '100%',
 
-            '& .MuiCardActions-root': {
-              alignSelf: 'flex-end',
-            },
             '& .MuiCardContent-root': {
               display: 'flex',
               flexDirection: 'column',
-              gap: theme.spacing(3),
+              gap: theme.spacing(2),
+              padding: 0,
+              marginBottom: theme.spacing(1),
+            },
+            '& .MuiCardActions-root': {
+              display: 'flex',
+              justifyContent: 'space-between',
+              gap: theme.spacing(1),
               padding: 0,
             },
           },
