@@ -1,30 +1,22 @@
 import React from 'react';
-import {notFound} from 'next/navigation';
 
-import ButtonExample from '../common/Button/ButtonExample';
-import Title from '../common/Title/Title';
 import ShopByCatalog from './components/ShopByCatalog/ShopByCatalog';
+import ListPhones from '../(home)/components/SaleList/SaleList';
+import {getPhones} from '@/helpers/helper';
+import MainSlider from './components/SliderBlock/Slider';
 
 import styles from './page.module.css';
 
-const getData = async () => {
-  const res = await fetch('http://localhost:3000/api/phones', {cache: 'no-store'});
-
-  if (!res.ok) return notFound();
-
-  return res.json();
-};
-
 const Home = async () => {
-  const phone = await getData();
-  // console.log(phone[0]);
+  const {phonesWithSale, phonesWithoutSale, lengthPhones} = await getPhones();
+  console.log(lengthPhones.length);
 
   return (
     <main className={styles.main}>
-      Oleh {phone[0].phone}
-      <Title title={'bla bla'} />
-      <ButtonExample />
-      <ShopByCatalog />
+      <MainSlider />
+      <ListPhones phones={phonesWithSale} title={'Hot prices'} />
+      <ShopByCatalog amount={lengthPhones.length} />
+      <ListPhones phones={phonesWithoutSale} title={'Brand new models'} />
     </main>
   );
 };

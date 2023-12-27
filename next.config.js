@@ -13,6 +13,13 @@ const nextConfig = {
   env: {
     MONGO_URL: 'mongodb+srv://olehnadieindev:Pass321@cluster0.x5ql9gk.mongodb.net/catalog?retryWrites=true&w=majority',
   },
+  images: {
+    remotePatterns: [
+      {
+        hostname: 'www.impulse-store.com.ua',
+      },
+    ],
+  },
 };
 
 module.exports = nextConfig;

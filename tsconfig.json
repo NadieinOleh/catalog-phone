@@ -17,7 +17,6 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true,
     "plugins": [
       {
         "name": "next"
@@ -27,7 +26,8 @@
       "@/*": [
         "./*"
       ]
-    }
+    },
+    "incremental": true
   },
   "include": [
     "src/**/*.ts",
