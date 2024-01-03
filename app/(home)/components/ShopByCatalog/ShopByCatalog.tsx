@@ -1,14 +1,22 @@
 'use client';
 
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Grid, Typography} from '@mui/material';
 
 import Title from '@/app/common/Title/Title';
 import ImageBlock from './components/ImageBlock';
+import useStore from '@/app/store/store';
 
 import {GridStyled, BoxStyled, LinkStyled} from './Styles';
 
 const ShopByCatalog = ({amount = 0}) => {
+  const getLength = useStore(state => state.getLength);
+
+  useEffect(() => {
+    getLength(amount);
+    localStorage.setItem('length', amount.toString());
+  }, [amount, getLength]);
+
   return (
     <BoxStyled>
       <Title title={'Shop by category'} />
