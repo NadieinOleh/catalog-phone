@@ -8,7 +8,6 @@ import PhoneCard from './components/Back/PhoneCard/PhoneCard';
 
 const Phone = async ({params}: {params: {slug: string}}) => {
   const phone = await getPhone(params.slug);
-  console.log(phone);
 
   return (
     <div>
