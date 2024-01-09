@@ -15,7 +15,7 @@ const Links = () => {
       </LogoStyled>
 
       {headerLinks.map((link: Link) => (
-        <LinkStyled key={link.id} href={link.link}>
+        <LinkStyled key={link.id} href={`/${link.link}`}>
           {link.link}
         </LinkStyled>
       ))}

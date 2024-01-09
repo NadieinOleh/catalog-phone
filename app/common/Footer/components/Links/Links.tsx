@@ -10,7 +10,7 @@ const Links = () => {
   return (
     <BoxStyled>
       {footerLinks.map(link => (
-        <LinkStyled key={link.id} href={link.link}>
+        <LinkStyled key={link.id} href={link.link} target={'_blank'}>
           {link.title}
         </LinkStyled>
       ))}
