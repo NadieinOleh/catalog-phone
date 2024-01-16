@@ -4,13 +4,13 @@ import {Phones} from '@/helpers/types';
 import DeskBlock from './components/DescBlock/DeskBlock';
 import ButtonBlock from './components/ButtonBlock/ButtonBlock';
 
-import {LinkStyled, TypographyStyled} from './Styles';
+import {LinkStyled, TypographyStyled, GridItemStyled} from './Styles';
 
 const PhoneCard = ({phones}: {phones: Phones[]}) => {
   return (
     <Grid container spacing={'24px'} sx={{marginBottom: '80px'}}>
       {phones.map((phone: Phones) => (
-        <Grid item key={phone._id} xs={3}>
+        <GridItemStyled item key={phone._id} xs={12} md={4} xl={3}>
           <Card sx={{maxWidth: 350}}>
             <CardMedia sx={{height: 208, backgroundSize: 'contain'}} image={phone.image} title={phone.name} />
 
@@ -34,7 +34,7 @@ const PhoneCard = ({phones}: {phones: Phones[]}) => {
               <ButtonBlock />
             </CardActions>
           </Card>
-        </Grid>
+        </GridItemStyled>
       ))}
     </Grid>
   );

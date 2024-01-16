@@ -10,87 +10,46 @@ import White from '@/app/common/icons/White';
 import {BoxStyled} from './Styles';
 import {Box} from '@mui/material';
 
-//change logic
+type ColorType = {
+  primary: string;
+  secondary: string;
+  black: string;
+  white: string;
+  [key: string]: string;
+};
 
 const Color = () => {
-  const [primary, setPrimary] = useState('#E2E6E9');
-  const [secondary, setSecondary] = useState('#E2E6E9');
-  const [black, setBlack] = useState('#E2E6E9');
-  const [white, setWhite] = useState('#E2E6E9');
+  const [color, setColor] = useState<ColorType>({
+    primary: '#E2E6E9',
+    secondary: '#E2E6E9',
+    black: '#E2E6E9',
+    white: '#E2E6E9',
+  });
 
-  const toggleColorPrimary = () => {
-    if (primary === '#E2E6E9') {
-      setPrimary('#313237');
-    }
-
-    if (primary === '#313237') {
-      setPrimary('#E2E6E9');
-    }
-  };
-
-  const toggleColorSecondary = () => {
-    if (secondary === '#E2E6E9') {
-      setSecondary('#313237');
-    }
-
-    if (secondary === '#313237') {
-      setSecondary('#E2E6E9');
-    }
-  };
-
-  const toggleColorBlack = () => {
-    if (black === '#E2E6E9') {
-      setBlack('#313237');
-    }
-
-    if (black === '#313237') {
-      setBlack('#E2E6E9');
-    }
-  };
-
-  const toggleColorWhite = () => {
-    if (white === '#E2E6E9') {
-      setWhite('#313237');
-    }
-
-    if (white === '#313237') {
-      setWhite('#E2E6E9');
-    }
-  };
-
-  const changeColor = (name: string) => {
-    switch (name) {
-      case 'primary':
-        toggleColorPrimary();
-        return;
-      case 'secondary':
-        toggleColorSecondary();
-        return;
-      case 'black':
-        toggleColorBlack();
-        return;
-      case 'white':
-        toggleColorWhite();
-        return;
-
-      default:
-        return;
-    }
+  const changeColor = (name: keyof ColorType) => {
+    const newColor = color[name] === '#E2E6E9' ? '#313237' : '#E2E6E9';
+    setColor({
+      primary: '#E2E6E9',
+      secondary: '#E2E6E9',
+      black: '#E2E6E9',
+      white: '#E2E6E9',
+      [name]: newColor,
+    });
   };
 
   return (
     <BoxStyled>
       <Box onClick={() => changeColor('primary')}>
-        <Primary color={primary} />
+        <Primary color={color.primary} />
       </Box>
       <Box onClick={() => changeColor('secondary')}>
-        <Secondary color={secondary} />
+        <Secondary color={color.secondary} />
       </Box>
       <Box onClick={() => changeColor('black')}>
-        <Black color={black} />
+        <Black color={color.black} />
       </Box>
       <Box onClick={() => changeColor('white')}>
-        <White color={white} />
+        <White color={color.white} />
       </Box>
     </BoxStyled>
   );

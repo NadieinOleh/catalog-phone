@@ -1,7 +1,8 @@
 'use client';
 
-import {Box} from '@mui/material';
 import React from 'react';
+import {Box} from '@mui/material';
+
 import Color from '../Color/Color';
 import Description from '../Description/Description';
 
