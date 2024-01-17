@@ -1,16 +1,28 @@
 'use client';
 
 import React from 'react';
-import {Box} from '@mui/material';
 
 import Color from '../Color/Color';
 import Description from '../Description/Description';
+import Opacity from '../OpacityBlock/Opacity';
+import ButtonBlock from '@/app/common/PhoneCard/components/ButtonBlock/ButtonBlock';
+import Price from '../Price/Price';
+
+import {BoxButton, BoxStyled} from './Styles';
 
 const OneCard = () => {
   return (
-    <Box>
+    <BoxStyled>
       <Description title={'Available colors'} block={<Color />} />
-    </Box>
+
+      <Description title={'Select capacity'} block={<Opacity />} />
+
+      <Price />
+
+      <BoxButton>
+        <ButtonBlock />
+      </BoxButton>
+    </BoxStyled>
   );
 };
 export default OneCard;

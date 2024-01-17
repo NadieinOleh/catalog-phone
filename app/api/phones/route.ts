@@ -10,7 +10,7 @@ export const GET = async (req: NextApiRequest) => {
     await connect();
 
     const {searchParams} = new URL(req.url || '', `http://${req.headers.host}`);
-    const limit = parseInt(searchParams.get('limit') || '10') || 10;
+    const limit = parseInt(searchParams.get('limit') || '30') || 30;
     const sort = searchParams.get('sort') || '';
 
     if (isNaN(limit)) {
