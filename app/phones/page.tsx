@@ -9,7 +9,7 @@ import LengthPhones from './components/LengthPhones/LengthPhones';
 const Phones = () => {
   return (
     <>
-      <Nav />
+      <Nav mainPath={'Phones'} />
       <Title title={'Mobile phones'} spacing={0} />
       <LengthPhones />
       <SortedBlock />

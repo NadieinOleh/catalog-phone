@@ -2,17 +2,13 @@
 
 import React from 'react';
 import {Typography} from '@mui/material';
-import {usePathname} from 'next/navigation';
 
-import ArrowRight from '../icons/arrowRight';
 import House from '../icons/House';
+import ArrowRight from '../icons/ArrowRight';
 
 import {BoxStyled, LinkStyled, Container} from './Styles';
 
-const Nav = () => {
-  const pathname = usePathname();
-  const arrayPath = pathname.split('/').filter(Boolean);
-
+const Nav = ({mainPath, slug}: {mainPath: string; slug?: string}) => {
   return (
     <Container>
       <BoxStyled>
@@ -20,21 +16,24 @@ const Nav = () => {
           <House />
         </LinkStyled>
 
-        {arrayPath.map(path => {
-          const upperPath = path[0].toUpperCase() + path.slice(1);
+        <BoxStyled>
+          <ArrowRight />
 
-          return (
-            <BoxStyled key={path}>
+          <LinkStyled href={`/${mainPath.toLowerCase()}`}>
+            <Typography color="secondary.main" variant="body1">
+              {mainPath}
+            </Typography>
+          </LinkStyled>
+
+          {slug && (
+            <>
               <ArrowRight />
-
-              <LinkStyled href={path}>
-                <Typography color="secondary.main" variant="body1">
-                  {upperPath}
-                </Typography>
-              </LinkStyled>
-            </BoxStyled>
-          );
-        })}
+              <Typography color="secondary.main" variant="body1">
+                {slug}
+              </Typography>
+            </>
+          )}
+        </BoxStyled>
       </BoxStyled>
     </Container>
   );

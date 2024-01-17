@@ -32,7 +32,7 @@ export const footerLinks: Link[] = [
   },
   {
     id: 3,
-    link: '/',
-    title: 'rights',
+    link: 'https://www.linkedin.com/in/oleh-nadiein-764a96175/',
+    title: 'Powered by Oleh Nadiein',
   },
 ];
