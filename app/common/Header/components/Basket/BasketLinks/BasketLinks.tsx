@@ -8,12 +8,14 @@ import {IconStyled} from './Styles';
 
 type Props = {
   icon: ReactNode;
+  count: number;
 };
 
-const BasketLinks: FC<Props> = ({icon}) => {
+const BasketLinks: FC<Props> = ({icon, count} ) => {
+
   return (
     <IconStyled>
-      <Badge badgeContent={1} invisible={false} color="error">
+      <Badge badgeContent={count} invisible={false} color="error">
         {icon}
       </Badge>
     </IconStyled>

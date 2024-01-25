@@ -31,7 +31,7 @@ const PhoneCard = ({phones}: {phones: Phones[]}) => {
             </CardContent>
 
             <CardActions>
-              <ButtonBlock />
+              <ButtonBlock phone={phone}/>
             </CardActions>
           </Card>
         </GridItemStyled>
