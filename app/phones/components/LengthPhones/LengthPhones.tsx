@@ -1,14 +1,22 @@
-'use client';
+"use client";
 
-import React from 'react';
-import {Typography, useTheme} from '@mui/material';
+import React from "react";
+import { Typography, useTheme } from "@mui/material";
 
 const LengthPhones = () => {
-  const length = localStorage.getItem('length');
+  let length;
+
+  if (typeof window !== "undefined") {
+    length = String(localStorage.getItem("length")) || "0";
+  }
+
   const theme = useTheme();
 
   return (
-    <Typography color={'secondary.main'} sx={{margin: theme.spacing(1, 0, 5)}}>
+    <Typography
+      color={"secondary.main"}
+      sx={{ margin: theme.spacing(1, 0, 5) }}
+    >
       {length} models
     </Typography>
   );
