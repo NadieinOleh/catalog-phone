@@ -8,34 +8,35 @@ import HeartRed from "../icons/HeartRed";
 
 import { BoxStyled } from "./Styles";
 
-const ButtonHeart = ({phone}: {phone: Phones}) => {
-  const [selected, setSelected] = useState(false);
-  const add = useStore(state => state.add)
-  const remove = useStore(state => state.remove)
-  const increase = useStore(state => state.increase)
-  const decrease = useStore(state => state.decrease)
+const ButtonHeart = ({ phone }: { phone: Phones }) => {
+  const { selected } = phone;
+  const add = useStore((state) => state.add);
+  const remove = useStore((state) => state.remove);
+  const increase = useStore((state) => state.increase);
+  const decrease = useStore((state) => state.decrease);
+  const editPhone = useStore((state) => state.edit);
 
-  const a = useStore(state => state.quantityFavorites)
-console.log(a);
+  console.log(phone);
+  
 
   const AddOrRemove = (phone: Phones) => {
     if (selected) {
-      remove(phone._id)
-      decrease()
-      setSelected((prev) => !prev)
+      editPhone(phone._id);
+      remove(phone._id);
+      decrease();
     } else {
-      add(phone)
-      increase()
-      setSelected((prev) => !prev)
+      editPhone(phone._id);
+      add(phone);
+      increase();
     }
-  }
+  };
 
   return (
-  <>
-    <BoxStyled onClick={() => AddOrRemove(phone)}>
-      {selected ? <HeartRed /> : <Heart />}
-    </BoxStyled>
-  </>
+    <>
+      <BoxStyled onClick={() => AddOrRemove(phone)}>
+        {selected ? <HeartRed /> : <Heart />}
+      </BoxStyled>
+    </>
   );
 };
 

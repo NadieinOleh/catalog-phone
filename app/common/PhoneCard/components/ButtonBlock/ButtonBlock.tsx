@@ -12,7 +12,7 @@ const ButtonBlock = ({phone}: {phone: Phones}) => {
   return (
     <BoxStyled>
       <Button variant="contained">Add to cart</Button>
-      <ButtonHeart phone={phone}/>
+      <ButtonHeart phone={phone} />
     </BoxStyled>
   );
 };

@@ -8,4 +8,5 @@ export interface Phones {
   ram: string;
   sale: string;
   screen: string;
+  selected: boolean;
 }

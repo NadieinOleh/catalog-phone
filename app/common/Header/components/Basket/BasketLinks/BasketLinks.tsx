@@ -1,23 +1,26 @@
-'use client';
+"use client";
 
-import React, {FC, ReactNode} from 'react';
+import React, { FC, ReactNode } from "react";
+import Link from "next/link";
+import { Badge } from "@mui/material";
 
-import {Badge} from '@mui/material';
 
-import {IconStyled} from './Styles';
+import { IconStyled } from "./Styles";
 
 type Props = {
   icon: ReactNode;
   count: number;
+  link: string;
 };
 
-const BasketLinks: FC<Props> = ({icon, count} ) => {
-
+const BasketLinks: FC<Props> = ({ icon, count, link }) => {
   return (
     <IconStyled>
-      <Badge badgeContent={count} invisible={false} color="error">
-        {icon}
-      </Badge>
+      <Link href={link}>
+        <Badge badgeContent={count} invisible={false} color="error">
+          {icon}
+        </Badge>
+      </Link>
     </IconStyled>
   );
 };

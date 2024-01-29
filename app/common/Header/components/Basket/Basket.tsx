@@ -14,8 +14,8 @@ const Basket = () => {
 
   return (
     <BoxStyled>
-      <BasketLinks icon={<Heart />} count={heartBadge}/>
-      <BasketLinks icon={<Bin />} count={heartBadge}/>
+      <BasketLinks icon={<Heart />} count={heartBadge} link={'favorites'}/>
+      <BasketLinks icon={<Bin />} count={heartBadge} link={'basket'}/>
     </BoxStyled>
   );
 };
