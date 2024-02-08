@@ -11,11 +11,12 @@ import {BoxStyled} from './Styles';
 
 const Basket = () => {
   const heartBadge = useStore(state => state.quantityFavorites)
+  const cartBadge = useStore(state => state.quantityCart)
 
   return (
     <BoxStyled>
       <BasketLinks icon={<Heart />} count={heartBadge} link={'favorites'}/>
-      <BasketLinks icon={<Bin />} count={heartBadge} link={'basket'}/>
+      <BasketLinks icon={<Bin />} count={cartBadge} link={'cart'}/>
     </BoxStyled>
   );
 };

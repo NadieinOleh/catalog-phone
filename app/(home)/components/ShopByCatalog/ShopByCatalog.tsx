@@ -17,8 +17,8 @@ const ShopByCatalog = ({amount = 0}) => {
     <BoxStyled>
       <Title title={'Shop by category'} />
 
-      <Grid container spacing={3}>
-        <GridStyled item xl={4} xs={6}>
+      <Grid container spacing={3} justifyContent='center'>
+        <GridStyled item xl={4} lg={6} xs={12}>
           <ImageBlock path={'/phones'} bg={'#FCDBC1'} image={'/image6.png'} />
           <LinkStyled href={'/phones'}>
             <Typography variant="h3">Mobile phones</Typography>
@@ -28,7 +28,7 @@ const ShopByCatalog = ({amount = 0}) => {
           </LinkStyled>
         </GridStyled>
 
-        <GridStyled item xl={4} xs={6}>
+        <GridStyled item xl={4} lg={6} xs={12}>
           <ImageBlock path={'/tablets'} bg={'#8D8D92'} image={'/image5.png'} />
           <LinkStyled href={'/tablets'}>
             <Typography variant="h3">Tablets </Typography>
@@ -38,7 +38,7 @@ const ShopByCatalog = ({amount = 0}) => {
           </LinkStyled>
         </GridStyled>
 
-        <GridStyled item xl={4} xs={6}>
+        <GridStyled item xl={4} lg={6} xs={12}>
           <ImageBlock path={'/accessories'} bg={'#D53C51'} image={'/image7.png'} />
           <LinkStyled href={'/accessories'}>
             <Typography variant="h3">Accessories </Typography>

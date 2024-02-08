@@ -9,7 +9,7 @@ export const getPhonesHomePage = async () => {
 };
 
 export const getPhones = async (limit = 25, sort = '') => {
-  const res = await fetch(`http://localhost:3000/api/phones?limit=${limit}&sort=${sort}`, {cache: 'force-cache'});
+  const res = await fetch(`http://localhost:3000/api/phones?limit=${limit}&sort=${sort}`);
 
   if (!res.ok) return notFound();
 

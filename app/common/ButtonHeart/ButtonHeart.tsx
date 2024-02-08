@@ -10,14 +10,11 @@ import { BoxStyled } from "./Styles";
 
 const ButtonHeart = ({ phone }: { phone: Phones }) => {
   const { selected } = phone;
-  const add = useStore((state) => state.add);
-  const remove = useStore((state) => state.remove);
-  const increase = useStore((state) => state.increase);
-  const decrease = useStore((state) => state.decrease);
-  const editPhone = useStore((state) => state.edit);
-
-  console.log(phone);
-  
+  const add = useStore((state) => state.addHeart);
+  const remove = useStore((state) => state.removeHeart);
+  const increase = useStore((state) => state.increaseHeart);
+  const decrease = useStore((state) => state.decreaseHeart);
+  const editPhone = useStore((state) => state.editHeart);
 
   const AddOrRemove = (phone: Phones) => {
     if (selected) {

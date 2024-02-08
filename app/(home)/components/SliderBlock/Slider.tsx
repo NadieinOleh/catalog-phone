@@ -21,8 +21,8 @@ export default class MainSlider extends Component {
       <BoxStyled>
         <StyledSlider {...settings}>
           <Image height={400} width={1140} alt="Banner" src={'/Banner.png'} style={{objectFit: 'cover'}} />
-          <Image height={400} width={1140} alt="Banner" src={'/Banner.png'} style={{objectFit: 'cover'}} />
-          <Image height={400} width={1140} alt="Banner" src={'/Banner.png'} style={{objectFit: 'cover'}} />
+          <Image height={400} width={1140} alt="Banner" src={'/banner-tablets.jpeg'} style={{objectFit: 'cover'}} />
+          <Image height={400} width={1140} alt="Banner" src={'/banner-accessories.webp'} style={{objectFit: 'cover'}} />
         </StyledSlider>
       </BoxStyled>
     );
