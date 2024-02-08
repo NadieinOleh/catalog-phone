@@ -43,6 +43,7 @@ const useStore = create<State & Actions>((set) => ({
     set(() => ({
       phones: phones.map((phone) => ({
         ...phone,
+        isSale: !phone.isSale,
         selected: false,
         selectedCart: false,
       })),

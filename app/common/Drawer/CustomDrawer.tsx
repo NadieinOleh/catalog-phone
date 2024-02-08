@@ -12,6 +12,7 @@ import { LinkStyled } from "../Header/components/Links/Styles";
 import Basket from "../Header/components/Basket/Basket";
 
 import { BoxStyled } from "./Styles";
+import SwitchMode from "../Switch/Switch";
 
 type Anchor = "right";
 

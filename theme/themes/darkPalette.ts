@@ -1,6 +1,6 @@
-import {createTheme} from '@mui/material/styles';
+import { createTheme } from "@mui/material/styles";
 
-declare module '@mui/material/styles/createPalette' {
+declare module "@mui/material/styles/createPalette" {
   export interface TypeBackground {
     black: string;
     grey: string;
@@ -11,49 +11,49 @@ declare module '@mui/material/styles/createPalette' {
 
 const darkPalette = createTheme({
   palette: {
-    mode: 'dark',
+    mode: "dark", // Set the mode to dark
     primary: {
-      light: '#FFE48D',
-      main: '#313237',
-      dark: '#FFCD2B',
+      light: "#FFD95B", // Adjust light shade of primary color
+      main: "#fff", // Change primary main color to a darker shade
+      dark: "#313233",
     },
     secondary: {
-      main: '#89939A',
-      light: '#0079FF',
-      dark: '#004694',
+      main: "#7E8D95", // Adjust secondary main color
+      light: "#66C1FF", // Adjust light shade of secondary color
+      dark: "#004D7F", // Adjust dark shade of secondary color
     },
     error: {
-      main: '#FA886F',
-      light: '#FB5D3A',
-      dark: '#F24822',
+      main: "#F06292", // Adjust error color
+      light: "#E57373", // Adjust light shade of error color
+      dark: "#D32F2F", // Adjust dark shade of error color
     },
     warning: {
-      main: '#F5903B',
-      light: '#F6A766',
-      dark: '#EC6C01',
+      main: "#FFB74D", // Adjust warning color
+      light: "#FFD54F", // Adjust light shade of warning color
+      dark: "#FFA000", // Adjust dark shade of warning color
     },
     success: {
-      main: '#3BA93E',
-      light: '#75D878',
-      dark: '#2F7D31',
+      main: "#66BB6A", // Adjust success color
+      light: "#81C784", // Adjust light shade of success color
+      dark: "#388E3C", // Adjust dark shade of success color
     },
     info: {
-      main: '#8C8C90',
-      light: '#BDBDBF',
-      dark: '#727272',
-      contrastText: '#555555',
+      main: "#90A4AE", // Adjust info color
+      light: "#B0BEC5", // Adjust light shade of info color
+      dark: "#607D8B", // Adjust dark shade of info color
+      contrastText: "#FFFFFF", // Adjust contrast text for better visibility
     },
     background: {
-      default: '#FBFAFA',
-      black: '#2C2C2D',
-      grey: '#E0E0E0',
-      border: '#EFF5FE',
-      white: '#FFFFFF',
+      default: "#1E1E1E", // Change default background color to a darker shade
+      black: "#000000", // Adjust black color
+      grey: "#424242", // Adjust grey color
+      border: "#757575", // Adjust border color
+      white: "#303030", // Adjust white color
     },
     text: {
-      disabled: '#FBFAFA',
-      primary: '#E2E6E9',
-      secondary: '#000',
+      disabled: "#757575", // Adjust disabled text color
+      primary: "#FFFFFF", // Change primary text color to white
+      secondary: "#E0E0E0", // Adjust secondary text color
     },
   },
 });

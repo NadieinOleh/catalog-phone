@@ -39,12 +39,12 @@ const SortedBlock = () => {
           inputProps={{MenuProps: {disableScrollLock: true}}}>
           <MenuItem value={'increase'}>
             <Typography variant="h5" color={'primary.main'}>
-              Increase price
+               Price Low to High
             </Typography>
           </MenuItem>
           <MenuItem value={'decrease'}>
             <Typography variant="h5" color={'primary.main'}>
-              Decrease price
+              Price High to Low
             </Typography>
           </MenuItem>
         </Select>

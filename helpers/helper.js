@@ -1,7 +1,7 @@
 import {notFound} from 'next/navigation';
 
 export const getPhonesHomePage = async () => {
-  const res = await fetch('http://localhost:3000/api/phonesSale', {cache: 'no-store'});
+  const res = await fetch('http://localhost:3000/api/phonesSale', { cache: 'no-store' });
 
   if (!res.ok) return notFound();
 
