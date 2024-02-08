@@ -12,7 +12,7 @@ type Props = {
   isSale?: boolean;
 };
 
-const DeskBlock: FC<Props> = ({desc, sale, title, isSale}) => {
+const DeskBlock: FC<Props> = ({desc, sale, title, isSale = true}) => {
   if (!desc) return null;
 
   return (

@@ -9,7 +9,7 @@ import useStore from "../store/store";
 
 const Favorites = () => {
   const item = useStore((state) => state.quantityFavorites);
-  const phones = useStore((state) => state.favoritesPhone);
+  const phones = useStore((state) => state.favoritePhones);
 
   console.log(phones);
 
@@ -25,7 +25,17 @@ const Favorites = () => {
         {item === 1 ? `${item} item` : `${item} items`}
       </Typography>
 
-      {!!phones.length ? <PhoneCard phones={phones} /> : <Typography sx={{textAlign: 'center'}} variant='h2' color='warning.main'>Your favorite cart is empty</Typography>}
+      {!!phones.length ? (
+        <PhoneCard phones={phones} />
+      ) : (
+        <Typography
+          sx={{ textAlign: "center" }}
+          variant="h2"
+          color="warning.main"
+        >
+          Your favorite cart is empty
+        </Typography>
+      )}
     </>
   );
 };

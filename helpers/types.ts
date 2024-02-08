@@ -6,7 +6,9 @@ export interface Phones {
   isSale: boolean;
   price: number;
   ram: string;
-  sale: string;
+  sale: number;
   screen: string;
-  selected: boolean;
+  selected?: boolean;
+  selectedCart?: boolean;
+  quantity: number;
 }

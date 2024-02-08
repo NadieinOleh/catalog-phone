@@ -1,24 +1,26 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import React from 'react';
-import Logo from '../icons/Logo';
-import BackToTop from './components/BackToTop/BackToTop';
-import Links from './components/Links/Links';
-import {BoxStyled} from './Styles';
+import React from "react";
+import LogoBlock from "../Logo/Logo";
+import BackToTop from "./components/BackToTop/BackToTop";
+import Links from "./components/Links/Links";
+
+import { BoxStyled, BoxMobileStyled } from "./Styles";
 
 const Footer = () => {
   return (
     <footer>
       <BoxStyled>
-        <Link href={'/'}>
-          <Logo />
-        </Link>
-
+        <LogoBlock />
         <Links />
-
         <BackToTop />
       </BoxStyled>
+
+      <BoxMobileStyled>
+        <LogoBlock />
+        <BackToTop />
+        <Links />
+      </BoxMobileStyled>
     </footer>
   );
 };

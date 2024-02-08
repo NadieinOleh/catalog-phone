@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
-import {Theme, createTheme} from '@mui/material';
+import { Theme, createTheme } from "@mui/material";
 
-import lightPalette from './lightPalette';
+import lightPalette from "./lightPalette";
 
 export const toolbarHeights = {
   mobilePortrait: 60,
@@ -25,13 +25,13 @@ const createCommonTheme = (theme: Theme) =>
     mixins: {
       toolbar: {
         minHeight: toolbarHeights.mobilePortrait,
-        [`${theme.breakpoints.up('xs')} and (orientation: landscape)`]: {
+        [`${theme.breakpoints.up("xs")} and (orientation: landscape)`]: {
           minHeight: toolbarHeights.mobileLandscape,
         },
-        [theme.breakpoints.up('sm')]: {
+        [theme.breakpoints.up("sm")]: {
           minHeight: toolbarHeights.mobileLandscape,
         },
-        [theme.breakpoints.up('md')]: {
+        [theme.breakpoints.up("md")]: {
           minHeight: toolbarHeights.tabletDesktop,
         },
       },
@@ -40,82 +40,87 @@ const createCommonTheme = (theme: Theme) =>
       MuiTypography: {
         styleOverrides: {
           root: {
-            fontFamily: 'inherit',
+            fontFamily: "inherit",
             color: theme.palette.background.black,
           },
           h1: {
-            fontSize: '32px',
-            lineHeight: '41px',
-            fontWeight: '700',
-            letterSpacing: '-0.01em',
+            fontSize: "32px",
+            lineHeight: "41px",
+            fontWeight: "700",
+            letterSpacing: "-0.01em",
           },
           h2: {
-            fontSize: '22px',
-            lineHeight: '31px',
-            fontWeight: '700',
+            fontSize: "22px",
+            lineHeight: "31px",
+            fontWeight: "700",
           },
           h3: {
-            fontSize: '20px',
-            lineHeight: '26px',
-            fontWeight: '500',
+            fontSize: "20px",
+            lineHeight: "26px",
+            fontWeight: "500",
           },
           h4: {
             // uppercase
-            fontSize: '12px',
-            lineHeight: '11px',
-            fontWeight: '700',
-            letterSpacing: '0.04em',
-            textTransform: 'uppercase',
+            fontSize: "12px",
+            lineHeight: "11px",
+            fontWeight: "700",
+            letterSpacing: "0.04em",
+            textTransform: "uppercase",
           },
           h5: {
             //buttons
-            fontSize: '14px',
-            lineHeight: '21px',
-            fontWeight: '600',
+            fontSize: "14px",
+            lineHeight: "21px",
+            fontWeight: "600",
           },
           body1: {
-            fontSize: '14px',
-            lineHeight: '21px',
-            fontWeight: '400',
+            fontSize: "14px",
+            lineHeight: "21px",
+            fontWeight: "400",
           },
           body2: {
-            fontSize: '12px',
-            lineHeight: '15px',
-            fontWeight: '600',
+            fontSize: "12px",
+            lineHeight: "15px",
+            fontWeight: "600",
           },
         },
       },
       MuiButton: {
         styleOverrides: {
           root: {
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            boxSizing: 'border-box',
-            minWidth: '208px',
-
-            '&:hover': {
-              background: theme.palette.info.dark,
-            },
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            boxSizing: "border-box",
+            flexGrow: 1
           },
           startIcon: {
-            display: 'flex',
+            display: "flex",
             marginLeft: `-15px`,
-            justifyContent: 'center',
-            alignItems: 'center',
-            width: '48px',
-            height: '48px',
-            borderRadius: '100%',
+            justifyContent: "center",
+            alignItems: "center",
+            width: "48px",
+            height: "48px",
+            borderRadius: "100%",
           },
           containedPrimary: {
             color: theme.palette.background.white,
             background: theme.palette.primary.main,
+
+            "&:hover": {
+              background: theme.palette.info.dark,
+            },
           },
           containedSecondary: {
-            borderBlockStyle: 'solid',
+            borderBlockStyle: "solid",
             borderBlockColor: theme.palette.background.white,
-            borderBlock: '1px',
+            borderBlock: "1px",
             color: theme.palette.success.main,
+            background: theme.palette.background.white,
+
+            "&:hover": {
+              background: theme.palette.background.white,
+            },
           },
         },
       },
@@ -133,18 +138,18 @@ const createCommonTheme = (theme: Theme) =>
             padding: theme.spacing(4),
             borderRadius: 28,
             border: `2px solid ${theme.palette.background.border}`,
-            height: '100%',
+            height: "100%",
 
-            '& .MuiCardContent-root': {
-              display: 'flex',
-              flexDirection: 'column',
+            "& .MuiCardContent-root": {
+              display: "flex",
+              flexDirection: "column",
               gap: theme.spacing(2),
               padding: 0,
               marginBottom: theme.spacing(1),
             },
-            '& .MuiCardActions-root': {
-              display: 'flex',
-              justifyContent: 'space-between',
+            "& .MuiCardActions-root": {
+              display: "flex",
+              justifyContent: "space-between",
               gap: theme.spacing(1),
               padding: 0,
             },

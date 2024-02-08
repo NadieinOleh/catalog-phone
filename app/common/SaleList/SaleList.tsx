@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React, { useEffect } from 'react';
 import Title from '@/app/common/Title/Title';
@@ -10,6 +10,8 @@ const ListPhones = ({phones, title}: {phones: Phones[]; title?: string}) => {
   const phonesStorage = useStore((state) => state.phones)
   const setPhone = useStore((state) => state.setPhones)
 
+console.log(phones);
+
   useEffect(() => {
      setPhone(phones);
   }, [phones]);
@@ -17,7 +19,7 @@ const ListPhones = ({phones, title}: {phones: Phones[]; title?: string}) => {
   return (
     <>
       {title && <Title title={title} />}
-      <PhoneCard phones={phonesStorage} />
+        <PhoneCard phones={phonesStorage} />
     </>
   );
 };

@@ -18,7 +18,9 @@ const GetPhonesList = () => {
     try {
       const data = await getPhones(item, sortBy);
       setPhones(data);
-    } catch {
+    } catch (error) {
+      console.log(error);
+      
       setError('Opps we have problem');
     }
   };

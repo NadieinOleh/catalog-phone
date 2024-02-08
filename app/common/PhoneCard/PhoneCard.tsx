@@ -7,11 +7,8 @@ import DeskBlock from './components/DescBlock/DeskBlock';
 import ButtonBlock from './components/ButtonBlock/ButtonBlock';
 
 import {LinkStyled, TypographyStyled, GridItemStyled} from './Styles';
-import useStore from '@/app/store/store';
 
 const PhoneCard = ({phones}: {phones: Phones[]}) => {
-  
-
   return (
     <Grid container spacing={'24px'} sx={{marginBottom: '80px'}}>
       {phones.map((phone: Phones) => (

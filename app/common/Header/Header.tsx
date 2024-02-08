@@ -1,11 +1,13 @@
-'use client';
+"use client";
 
-import React from 'react';
+import React from "react";
 
-import Basket from './components/Basket/Basket';
-import Links from './components/Links/Links';
+import CustomDrawer from "../Drawer/CustomDrawer";
+import LogoBlock from "../Logo/Logo";
+import Basket from "./components/Basket/Basket";
+import Links from "./components/Links/Links";
 
-import {BoxLinksStyled} from './Styles';
+import { BoxLinksStyled, BoxMobileStyled } from "./Styles";
 
 const Header = () => {
   return (
@@ -14,6 +16,11 @@ const Header = () => {
         <Links />
         <Basket />
       </BoxLinksStyled>
+
+      <BoxMobileStyled>
+        <LogoBlock />
+        <CustomDrawer />
+      </BoxMobileStyled>
     </header>
   );
 };

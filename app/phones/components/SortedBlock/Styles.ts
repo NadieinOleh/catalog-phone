@@ -7,4 +7,10 @@ export const BoxStyled = styled(Box)(({theme}) => ({
   alignItems: 'center',
   gap: theme.spacing(2),
   marginBottom: theme.spacing(3),
+
+  [theme.breakpoints.down("sm")]: {
+    flexDirection: "column",
+    alignItems: 'flex-start',
+    gap: theme.spacing(1),
+  },
 }));
