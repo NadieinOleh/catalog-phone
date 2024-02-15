@@ -2,6 +2,7 @@
 import { Theme, createTheme } from "@mui/material";
 
 import lightPalette from "./lightPalette";
+import darkPalette from "./darkPalette";
 
 export const toolbarHeights = {
   mobilePortrait: 60,
@@ -41,7 +42,7 @@ const createCommonTheme = (theme: Theme) =>
         styleOverrides: {
           root: {
             fontFamily: "inherit",
-            color: theme.palette.background.black,
+            color: theme.palette.primary.main,
           },
           h1: {
             fontSize: "32px",
@@ -160,3 +161,4 @@ const createCommonTheme = (theme: Theme) =>
   });
 
 export const lightTheme = createTheme(createCommonTheme(lightPalette));
+export const darkTheme = createTheme(createCommonTheme(darkPalette));

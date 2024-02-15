@@ -4,10 +4,11 @@ import React from "react";
 
 import CustomDrawer from "../Drawer/CustomDrawer";
 import LogoBlock from "../Logo/Logo";
+import SwitchMode from "../Switch/Switch";
 import Basket from "./components/Basket/Basket";
 import Links from "./components/Links/Links";
 
-import { BoxLinksStyled, BoxMobileStyled } from "./Styles";
+import { BoxLinksStyled, BoxMobileStyled, BoxMobile } from "./Styles";
 
 const Header = () => {
   return (
@@ -19,7 +20,10 @@ const Header = () => {
 
       <BoxMobileStyled>
         <LogoBlock />
-        <CustomDrawer />
+        <BoxMobile>
+          <SwitchMode />
+          <CustomDrawer />
+        </BoxMobile>
       </BoxMobileStyled>
     </header>
   );

@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import {Card, CardActions, CardContent, CardMedia, Grid} from '@mui/material';
 import {Phones} from '@/helpers/types';
 import DeskBlock from './components/DescBlock/DeskBlock';

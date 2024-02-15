@@ -1,6 +1,6 @@
-import {createTheme} from '@mui/material/styles';
+import { createTheme } from "@mui/material/styles";
 
-declare module '@mui/material/styles/createPalette' {
+declare module "@mui/material/styles/createPalette" {
   export interface TypeBackground {
     black: string;
     grey: string;
@@ -11,49 +11,49 @@ declare module '@mui/material/styles/createPalette' {
 
 const darkPalette = createTheme({
   palette: {
-    mode: 'dark',
+    mode: "dark",
     primary: {
-      light: '#FFE48D',
-      main: '#313237',
-      dark: '#FFCD2B',
+      light: "#FFD95B",  
+      main: "#fff", 
+      dark: "#313233",
     },
     secondary: {
-      main: '#89939A',
-      light: '#0079FF',
-      dark: '#004694',
+      main: "#7E8D95", 
+      light: "#66C1FF", 
+      dark: "#004D7F", 
     },
     error: {
-      main: '#FA886F',
-      light: '#FB5D3A',
-      dark: '#F24822',
+      main: "#F06292", 
+      light: "#E57373",
+      dark: "#D32F2F", 
     },
     warning: {
-      main: '#F5903B',
-      light: '#F6A766',
-      dark: '#EC6C01',
+      main: "#FFB74D",
+      light: "#FFD54F", 
+      dark: "#FFA000", 
     },
     success: {
-      main: '#3BA93E',
-      light: '#75D878',
-      dark: '#2F7D31',
+      main: "#66BB6A", 
+      light: "#81C784", 
+      dark: "#388E3C", 
     },
     info: {
-      main: '#8C8C90',
-      light: '#BDBDBF',
-      dark: '#727272',
-      contrastText: '#555555',
+      main: "#90A4AE", 
+      light: "#B0BEC5", 
+      dark: "#607D8B", 
+      contrastText: "#FFFFFF", 
     },
     background: {
-      default: '#FBFAFA',
-      black: '#2C2C2D',
-      grey: '#E0E0E0',
-      border: '#EFF5FE',
-      white: '#FFFFFF',
+      default: "#1E1E1E", 
+      black: "#000000", 
+      grey: "#424242", 
+      border: "#757575", 
+      white: "#303030", 
     },
     text: {
-      disabled: '#FBFAFA',
-      primary: '#E2E6E9',
-      secondary: '#000',
+      disabled: "#757575", 
+      primary: "#FFFFFF", 
+      secondary: "#E0E0E0", 
     },
   },
 });

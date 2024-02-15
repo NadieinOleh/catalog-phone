@@ -16,11 +16,17 @@ export const BoxLinksStyled = styled(Box)(({ theme }) => ({
 
 export const BoxMobileStyled = styled(Box)(({ theme }) => ({
   display: "none",
-  
+
   [theme.breakpoints.down("md")]: {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
     padding: theme.spacing(2, 0),
   },
+}));
+
+export const BoxMobile = styled(Box)(({ theme }) => ({
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
 }));

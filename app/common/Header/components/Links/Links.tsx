@@ -6,6 +6,7 @@ import LogoBlock from "@/app/common/Logo/Logo";
 import { headerLinks, Link } from "@/helpers/constants";
 
 import { LinkStyled, BoxStyled } from "./Styles";
+import SwitchMode from "@/app/common/Switch/Switch";
 
 const Links = () => {
   return (
@@ -17,6 +18,8 @@ const Links = () => {
           {link.link}
         </LinkStyled>
       ))}
+
+      <SwitchMode />
     </BoxStyled>
   );
 };
