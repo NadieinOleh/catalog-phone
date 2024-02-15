@@ -16,9 +16,6 @@ const ButtonBlock = ({ phone }: { phone: Phones }) => {
   const editPhone = useStore((state) => state.editCart);
   const { selectedCart } = phone;
   
-  console.log(phone);
-  
-
   const AddOrRemove = (phone: Phones) => {
     if (selectedCart) {
       editPhone(phone._id);
@@ -35,7 +32,7 @@ const ButtonBlock = ({ phone }: { phone: Phones }) => {
     <>
       <Button
         variant="contained"
-        color={!phone.selectedCart ? "primary" : "secondary"}
+        color={!selectedCart ? "primary" : "secondary"}
         onClick={() => AddOrRemove(phone)}
       >
         {!selectedCart ? "Add to cart" : "Added to cart"}
