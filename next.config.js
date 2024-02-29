@@ -11,7 +11,7 @@ const nextConfig = {
     },
   },
   env: {
-    MONGO_URL: 'mongodb+srv://olehnadieindev:<Pass321@cluster0.x5ql9gk.mongodb.net/',
+    MONGO_URL: 'mongodb+srv://olehnadieindev:pass321@cluster0.x5ql9gk.mongodb.net/',
 
   },
   images: {
@@ -25,4 +25,4 @@ const nextConfig = {
 
 module.exports = nextConfig;
 
-    // mongodb+srv://olehnadieindev:<Pass321@cluster0.x5ql9gk.mongodb.net/
+    // mongodb+srv://olehnadieindev:Pass321@cluster0.x5ql9gk.mongodb.net/
