@@ -4,8 +4,6 @@ import React from "react";
 import { Box } from "@mui/material";
 
 import useStore from "@/app/store/store";
-
-import { BoxStyled } from "../ItemCart/Styles";
 import ItemCart from "../ItemCart/ItemCart";
 
 const ListCart = () => {

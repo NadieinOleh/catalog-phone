@@ -25,7 +25,7 @@ export const BoxMobileStyled = styled(Box)(({ theme }) => ({
   },
 }));
 
-export const BoxMobile = styled(Box)(({ theme }) => ({
+export const BoxMobile = styled(Box)(() => ({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",

@@ -1,18 +1,18 @@
-'use client';
+"use client";
 
-import React from 'react';
-import {Typography} from '@mui/material';
+import React from "react";
+import { Typography } from "@mui/material";
 
-import House from '../icons/House';
-import ArrowRight from '../icons/ArrowRight';
+import House from "../icons/House";
+import ArrowRight from "../icons/ArrowRight";
 
-import {BoxStyled, LinkStyled, Container} from './Styles';
+import { BoxStyled, LinkStyled, Container } from "./Styles";
 
-const Nav = ({mainPath, slug}: {mainPath: string; slug?: string}) => {
+const Nav = ({ mainPath, slug }: { mainPath: string; slug?: string }) => {
   return (
     <Container>
       <BoxStyled>
-        <LinkStyled href={'/'}>
+        <LinkStyled href={"/"}>
           <House />
         </LinkStyled>
 

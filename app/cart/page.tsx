@@ -14,7 +14,7 @@ const Cart = () => {
   const theme = useTheme();
 
   return (
-    <Box sx={{marginBottom: theme.spacing(5)}}>
+    <Box sx={{ marginBottom: theme.spacing(5) }}>
       <Nav mainPath="Cart" />
       <Title title={"Cart"} />
 
@@ -25,7 +25,7 @@ const Cart = () => {
           </Grid>
 
           <Grid item lg={4} md={3} xs={12}>
-            <Total length={phones.length}/>
+            <Total length={phones.length} />
           </Grid>
         </Grid>
       ) : (

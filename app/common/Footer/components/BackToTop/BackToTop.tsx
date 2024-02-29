@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import React from 'react';
-import {Typography} from '@mui/material';
+import React from "react";
+import { Typography } from "@mui/material";
 
-import ArrowBlock from '@/app/common/ArrowBlock/ArrowBlock';
-import ArrowUp from '@/app/common/icons/ArrowUp';
-import {BoxStyled} from './Styles';
+import ArrowBlock from "@/app/common/ArrowBlock/ArrowBlock";
+import ArrowUp from "@/app/common/icons/ArrowUp";
+import { BoxStyled } from "./Styles";
 
 const BackToTop = () => {
   return (

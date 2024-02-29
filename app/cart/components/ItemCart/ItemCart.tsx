@@ -31,7 +31,7 @@ const ItemCart = ({ phone }: { phone: Phones }) => {
       </BoxDesc>
 
       <BoxPrice>
-        <AdditionBlock phone={phone}/>
+        <AdditionBlock phone={phone} />
         <Typography variant="h2">
           ${phone.isSale ? phone.price : phone.sale}
         </Typography>

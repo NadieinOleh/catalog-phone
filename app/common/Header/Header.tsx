@@ -8,7 +8,7 @@ import SwitchMode from "../Switch/Switch";
 import Basket from "./components/Basket/Basket";
 import Links from "./components/Links/Links";
 
-import { BoxLinksStyled, BoxMobileStyled, BoxMobile } from "./Styles";
+import {BoxLinksStyled, BoxMobileStyled, BoxMobile} from "./Styles";
 
 const Header = () => {
   return (

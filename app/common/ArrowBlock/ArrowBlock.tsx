@@ -1,15 +1,15 @@
-'use client';
+"use client";
 
-import React, {FC, ReactNode} from 'react';
+import React, { FC, ReactNode } from "react";
 
-import {BoxStyled} from './Styles';
+import { BoxStyled } from "./Styles";
 
 type Props = {
   icon: ReactNode;
   link?: string;
 };
 
-const ArrowBlock: FC<Props> = ({icon, link}) => {
+const ArrowBlock: FC<Props> = ({ icon, link }) => {
   return (
     <a href={link}>
       <BoxStyled>{icon}</BoxStyled>

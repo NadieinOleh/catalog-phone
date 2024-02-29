@@ -4,7 +4,6 @@ import React, { FC, ReactNode } from "react";
 import Link from "next/link";
 import { Badge } from "@mui/material";
 
-
 import { IconStyled } from "./Styles";
 
 type Props = {

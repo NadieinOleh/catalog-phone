@@ -3,7 +3,7 @@
 import React from "react";
 import Logo from "../icons/Logo";
 
-import { LogoStyled } from "./Styles";
+import {LogoStyled} from "./Styles";
 
 const LogoBlock = () => {
   return (

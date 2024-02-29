@@ -5,7 +5,7 @@ import LogoBlock from "../Logo/Logo";
 import BackToTop from "./components/BackToTop/BackToTop";
 import Links from "./components/Links/Links";
 
-import { BoxStyled, BoxMobileStyled } from "./Styles";
+import {BoxStyled, BoxMobileStyled} from "./Styles";
 
 const Footer = () => {
   return (
